@@ -1,0 +1,1 @@
+const app=getApp();Component({properties:{},data:{lists:[]},ready(){this.getGoodsHistory()},methods:{getGoodsHistory(){app.request.getGoodsHistory({success:s=>{this.setData({lists:s.data})}})}}});

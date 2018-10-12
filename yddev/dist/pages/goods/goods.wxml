@@ -1,0 +1,123 @@
+<!--pages/goods/goods.wxml-->
+<scroll-view class="goods-detail-component" scroll-y="true">
+    <!-- swiper -->
+    <swiper class="goods-swiper" indicator-dots="{{goodSwiper.dots}}"
+            indicator-color="{{goodSwiper.indicatorColor}}"
+            indicator-active-color="{{goodSwiper.activeColor}}"
+            autoplay="{{goodSwiper.autoplay}}"
+            interval="{{goodSwiper.interval}}"
+            duration="{{goodSwiper.duration}}"
+            circular="{{goodSwiper.circular}}">
+        <block wx:for="{{goodSwiper.items}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}"
+                       class="swiper-item-img"
+                       mode="aspectFill"
+                       bindtap="onviewswiper"
+                       data-index="{{index}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- Discount 商品 限时折扣-->
+    <view class="goods-discount">
+        <view class="discount-desc">
+            <view class="discount-unit">￥</view>
+            <view class="discount-price">{{goodsDetail.commodity_alert_price}}</view>
+            <view class="discount-prime">
+                <text class="discount-prime-cont">{{goodsDetail.commodity_price}}</text>
+                <text class="discount-prime-num">已售出{{goodsDetail.sales_num}}件</text>
+            </view>
+        </view>
+        <view class="discount-label">
+            <text>限时折扣</text>
+        </view>
+    </view>
+    <!-- describe 商品描述 -->
+    <view class="goods-describe">
+        <text class="goods-describe-text">{{goodsDetail.commodity_synopsis}}</text>
+        <text class="goods-describe-name">{{goodsDetail.commodity_name}}</text>
+        <view class="goods-describe-position">
+            <view class="goods-describe-city">
+                <text class="iconfont yd-dingwei goods-describe-city-icon"></text>
+                <text class="goods-describe-city-text">{{goodsDetail.supplier_origin}}</text>
+            </view>
+            <view class="goods-describe-transi">
+                <text>运费：</text>
+                <text>{{goodsDetail.is_mailing == 0? '包邮':goodsDetail.mailing_price}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="spliter"></view>
+    <!-- select goods model  -->
+    <view class="select-goods" bindtap="onselectparams">
+        <text class="select-goods-text">选择商品型号</text>
+        <text class="iconfont icon-icon" style="transform: rotateZ(-90deg)"></text>
+    </view>
+    <view class="spliter"></view>
+    <!-- appraise 商品 评价 -->
+    <view class="goods-appraise">
+        <view class="goods-appraise-title">
+            <view class="goods-appraise-title-label">
+                <text>商品评价 （{{goodsDetail.comment_num}}）</text>
+            </view>
+            <view class="goods-appraise-title-more" bindtap="onlinktoappriase">
+                <text class="appraise-title-more-text">查看全部{{goodsDetail.comment_num}}条评价</text>
+                <text class="iconfont icon-icon" style="transform: rotateZ(-90deg)"></text>
+            </view>
+        </view>
+        <view class="goods-appraise-body" wx:if="{{goodsDetail.comment_num!=0}}">
+            <block wx:for="{{goodsAppraise}}" wx:key="{{index}}">
+                <view class="goods-appraise-item">
+                    <image class="goods-appraise-item-user"></image>
+                    <view class="goods-appraise-item-content">
+                        <view class="goods-appraise-item-name">
+                            <text class="goods-appraise-username">原点租客</text>
+                            <text class="goods-appraise-time">2018-1-3</text>
+                        </view>
+                        <view class="goods-appraise-star">
+
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="spliter"></view>
+    <!-- detail -->
+    <view class="goods-detail">
+        <view class="goods-detail-title">商品详情</view>
+        <image class="goods-detail-img" src="http://p8rk87lub.bkt.clouddn.com/FhPis--ZANREN5bLl0vA5OV-gzVb"
+               mode="widthFix"></image>
+    </view>
+    <view class="spliter"></view>
+    <!-- recommen 推荐商品 -->
+    <view class="goods-recommen">
+        <view class="goods-detail-title">推荐商品</view>
+        <goods-list goods-list="{{recommendGoods}}"></goods-list>
+    </view>
+    <!-- footer placeholder  -->
+    <view style="height:78.5rpx;width:100%;"></view>
+</scroll-view>
+<!-- tab bar -->
+<view class="goods-tabbar">
+    <view class="tab-bar-item" bindtap="onbackhomepage">
+        <text class="tab-bar-item-img iconfont icon-zhuye"></text>
+        <text class="tab-bar-item-text">首页</text>
+    </view>
+    <view class="tab-bar-item" bindtap="playCall" data-phone="17625903261">
+        <text class="tab-bar-item-img iconfont icon-kefu"></text>
+        <text class="tab-bar-item-text">客服</text>
+    </view>
+    <view class="tab-bar-item" bindtap="playCall" data-phone="18066857415">
+        <text class="tab-bar-item-img iconfont icon-shouhou"></text>
+        <text class="tab-bar-item-text">售后</text>
+    </view>
+    <view class="tab-bar-btn" bindtap="comfirmOrder">
+        <text class="tab-bar-btn-text">立刻下单</text>
+    </view>
+</view>
+<!-- goods-popup -->
+<view class="goods-popup" animation="{{animationData}}">
+    <select-params bindemitcloseselect="oncloseselect" goods-id="{{goodsDetail.commodity_id}}"
+                   wx:if="{{openSelect}}"></select-params>
+</view>

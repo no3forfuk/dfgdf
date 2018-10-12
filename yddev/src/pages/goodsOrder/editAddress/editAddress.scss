@@ -1,0 +1,135 @@
+@import "../../../static/css/mixin.scss";
+
+.address-title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  padding: rpx(18.1);
+  &-label {
+    color: #878787;
+  }
+  &-comfirm {
+    color: #000;
+  }
+}
+
+.address-add-title {
+  padding: rpx(18.1);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  &-icon {
+    width: rpx(18.1);
+    height: rpx(18.1);
+    background-color: #eee;
+  }
+  &-text {
+    font-size: 14px;
+    color: #333;
+    margin-left: 10px;
+  }
+}
+
+.address-add-content {
+  &-item {
+    width: 100%;
+    padding-left: calc(#{rpx(36.2)} + 10px);
+    padding-right: rpx(18.1);
+    display: flex;
+    flex-direction: column;
+    &-user {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      &-name {
+        width: 40%;
+        height: rpx(45);
+        font-size: 14px;
+        color: #9a9a9a;
+        border: 1px solid #cacaca;
+        background-color: #f1f1f1;
+      }
+      &-phone {
+        width: 50%;
+        height: rpx(45);
+        font-size: 14px;
+        color: #9a9a9a;
+        border: 1px solid #cacaca;
+        background-color: #f1f1f1;
+      }
+    }
+  }
+}
+
+.address-add-content-item-province {
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.add-address-comfirm {
+  font-size: 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
+  padding: rpx(10) 0;
+}
+
+.address-add-content-item-address {
+  width: 100%;
+  height: rpx(45);
+  font-size: 14px;
+  color: #9a9a9a;
+  border: 1px solid #cacaca;
+  background-color: #f1f1f1;
+}
+
+.address-list {
+  width: 100%;
+  padding: rpx(18.1);
+  &-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0;
+    &-del {
+      width: rpx(22);
+      height: rpx(22);
+      background-color: #ccc;
+    }
+    &-info {
+      flex: 1;
+      margin-left: 15px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      &-ad {
+        font-size: 14px;
+      }
+      &-tel {
+        font-size: 14px;
+      }
+    }
+    &-edit {
+      font-size: 14px;
+    }
+  }
+}
+
+.address-list-item {
+  border-top: 1px solid #f1f1f1;
+}
+
+.address-list-item:nth-child(1) {
+  border-top: 0 none;
+}

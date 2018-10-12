@@ -1,0 +1,12 @@
+<!--pages/complain/complain.wxml-->
+<view class="complain-page">
+    <view class="textarea-box">
+        <textarea class="complain-textarea" placeholder="分享给我们您在圆点公寓遇到的事，让我们为您分忧" placeholder-class="placeholder-class" bindinput="onsetcomplainvalue" show-confirm-bar="false">
+        </textarea>
+    </view>
+    <view class="submit-btn-box">
+        <view class="submit-btn" bindtap="onsubmitcomplain">
+            <text>提交</text>
+        </view>
+    </view>
+</view>

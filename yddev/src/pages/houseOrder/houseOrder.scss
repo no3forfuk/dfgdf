@@ -1,0 +1,119 @@
+@import "../../static/css/mixin.scss";
+@import "../../static/css/picon.scss";
+
+.house-order-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #F4F4F4;
+  justify-content: space-between;
+  &-footer {
+    width: 100%;
+    height: rpx(102);
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.house-order-info {
+  width: 100%;
+  background-color: #fff;
+  margin-top: rpx(14);
+  padding-left: rpx(40);
+  &-roomnum {
+    width: 100%;
+    padding: rpx(24);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f1f1;
+    &-left {
+      flex: 30%;
+    }
+    &-right {
+      flex: 70%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      &-input {
+        width: 70%;
+        height: 100%;
+        background-color: #fff;
+        border: 0 none;
+        color: #c3c3c3;
+      }
+    }
+  }
+}
+
+.order-parise {
+  display: flex;
+  flex: 1;
+  padding-left: rpx(40);
+  align-items: center;
+  &-label {
+    font-size: 16px;
+    color: #484848;
+  }
+  &-num {
+    color: #FE514C;
+    font-size: 18px;
+  }
+}
+
+.pay-btn {
+  width: rpx(300);
+  height: 100%;
+  background-color: #FE514C;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.select-date-text {
+  color: #c3c3c3;
+}
+
+.select-order-type {
+  width: 100%;
+  background-color: #fff;
+  margin-top: rpx(16);
+  padding: rpx(14) rpx(64);
+  &-label {
+    font-size: 14px;
+    color: #484848;
+  }
+  &-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 10px;
+    &-item {
+      padding: 2px 5px;
+      border-radius: 5px;
+      border: 1px solid #3D9689;
+      color: #3D9689;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+  }
+}
+
+.select {
+  border: 0 none;
+  color: #fff;
+  background-color: #3D9689;
+}
+
+.add-user-icon {
+  width: 20px;
+  height: 20px;
+}

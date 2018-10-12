@@ -1,0 +1,90 @@
+<view class="spliter"></view>
+<view class="receiving-address">
+    <view class="receiving-address-title">
+        <text>收货地址:</text>
+        <view wx:if="{{hasAddress}}" class="edit-adrress-type" bindtap="openSelectAddress">
+            <image class="address-icon"></image>
+            <text class="address-text">选择地址</text>
+        </view>
+        <view wx:if="{{!hasAddress}}" class="edit-adrress-type" bindtap="startAddress">
+            <image class="address-icon"></image>
+            <text class="address-text">新增地址</text>
+        </view>
+    </view>
+    <view class="receiving-address-item" wx:if="{{hasAddress}}">
+        <radio-group>
+            <label class="radio-label">
+                <radio color="#fafafa" checked="true"/>
+                <text class="radio-text">{{currentAddress.consignee}}，{{currentAddress.province}}-{{currentAddress.city}}-{{currentAddress.area}}-{{currentAddress.address}}
+                </text>
+            </label>
+            <!--<view>TEL:{{currentAddress.consignee_mobile}}</view>-->
+        </radio-group>
+    </view>
+</view>
+<view class="spliter"></view>
+<!--商品概览-->
+<view class="goods-general">
+    <view class="goods-general-store">
+        <text class="goods-general-store-label">{{orderData.supplier_name}}</text>
+        <view class="goods-general-store-tips">
+            <block wx:for="{{storeTips}}" wx:key="{{index}}">
+                <text class="goods-general-store-tips-tip">{{item}}</text>
+            </block>
+        </view>
+    </view>
+    <view class="goods-general-goods">
+        <view class="goods-general-goods-left">
+            <image class="goods-general-goods-left-image" src="{{orderData.img}}"></image>
+            <view class="goods-general-goods-left-nn">
+                <text class="goods-general-goods-left-name">{{orderData.commodity_name}}</text>
+                <text class="goods-general-goods-left-num">x 1</text>
+            </view>
+        </view>
+        <view class="goods-general-goods-right">
+            <text class="goods-general-goods-right-before">￥ {{orderData.commodity_price}}</text>
+            <text class="goods-general-goods-right-after">￥ {{orderData.commodity_alert_price}}</text>
+        </view>
+    </view>
+    <view class="goods-general-standard">
+        <block wx:for="{{standardParams}}" wx:key="{{index}}">
+            <view class="goods-general-standard-item">
+                <text>{{item.label}}</text>
+                <text>{{item.value}}</text>
+            </view>
+        </block>
+    </view>
+</view>
+<view class="spliter"></view>
+<view class="goods-mail-price">
+    <text>邮费</text>
+    <text>￥ {{orderData.mailing_price}}</text>
+</view>
+<view class="spliter"></view>
+<!--备注-->
+<view class="goods-remarks">
+    <textarea class="goods-remarks-textarea" placeholder="备注：" maxlength="300">
+        <cover-view class="goods-remarks-textarea-mark" wx:if="true"></cover-view>
+    </textarea>
+</view>
+<!--message-tips-->
+<view class="message-tips">
+    <text>{{orderData.messageTips || messageTips}}</text>
+</view>
+<view class="goods-order-footer">
+    <view class="goods-order-footer-left">
+        <text>订单金额: ￥ {{orderData.commodity_alert_price}}</text>
+    </view>
+    <view class="goods-order-footer-right" bindtap="comfirmBuildOrder">
+        <text>去支付</text>
+    </view>
+</view>
+<!--新增收货地址-->
+<view class="address-popup" animation="{{animationData}}">
+    <edit-address wx:if="{{openAddress}}" bindcloseAddAddress="closeAddAddress"
+                  bindrefreshAddressList="getReceiveAddress"></edit-address>
+    <select-address wx:if="{{selectAddress}}"
+                    list="{{addressList}}"
+                    bindgoEdit="openEditAddress"
+                    bindcloseSelectAddress="closeSelectAddress"></select-address>
+</view>

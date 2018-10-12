@@ -1,0 +1,27 @@
+//Created By Dx on 2018/9/27
+@import "static/css/iconfont";
+@import "./static/css/mixin.scss";
+@font-face {
+  font-family: 'iconfont';  /* project id 868982 */
+  src: url('//at.alicdn.com/t/font_868982_vy1ez1kd9x.eot');
+  src: url('//at.alicdn.com/t/font_868982_vy1ez1kd9x.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_868982_vy1ez1kd9x.woff') format('woff'),
+  url('//at.alicdn.com/t/font_868982_vy1ez1kd9x.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_868982_vy1ez1kd9x.svg#iconfont') format('svg');
+}
+page {
+  width: rpx(750);
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  font-family: "PingFang SC", '萍方-简', '微软雅黑';
+  over-flow: hidden;
+}
+
+view, scroll-view, swiper, movable-view, cover-view, text, icon, rich-text,
+progress, button, checkbox-group, checkbox, form, input, label, picker,
+picker-view, radio-group, radio, slider, switch, textarea, navigator, audio,
+image, video, camera, live-player, live-pusher, map {
+  box-sizing: border-box;
+  over-flow: hidden;
+}

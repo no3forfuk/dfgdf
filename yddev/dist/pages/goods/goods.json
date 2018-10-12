@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "goods-list": "/template/goodsList/goodsList",
+        "select-params": "./selectParams/selectParams"
+    }
+}

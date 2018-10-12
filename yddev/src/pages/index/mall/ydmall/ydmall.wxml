@@ -1,0 +1,12 @@
+<!--pages/index/mall/ydmall/ydmall.wxml-->
+<view class="ydmall-component">
+    <navigator class="top-banner" url="/pages/promotion/promotion"></navigator>
+    <view class="hotcell">
+        <view class="hotcell-title">
+            <text class="hotcell-title-img iconfont icon-remen"></text>
+            <text>热销商品</text>
+        </view>
+        <goods-list goods-list="{{cellList}}"></goods-list>
+    </view>
+    <view style="height:90.5rpx;width:100%;"></view>
+</view>

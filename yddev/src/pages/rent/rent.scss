@@ -1,0 +1,79 @@
+/* pages/rent/rent.wxss */
+@import "../../static/css/mixin.scss";
+
+.rent-page {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  position: relative;
+}
+
+/* header tab */
+
+.rent-header {
+  width: 100%;
+  height: rpx(88);
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.header-item-text {
+  font-size: 14px;
+  line-height: 20px;
+  color: #999;
+}
+
+.rent-header-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+/* fee span*/
+
+.fee-mark {
+  height: rpx(4);
+  width: rpx(100);
+  background-color: #3d9689;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transition: all 0.3s;
+}
+
+.current-class {
+  color: #3d9689;
+}
+
+/* rent-body */
+
+.rent-body {
+  width: 100%;
+}
+
+/* footer */
+
+.rent-footer {
+  width: 100%;
+  height: rpx(88);
+  background-color: #fe514c;
+  color: #fff;
+  font-size: 18px;
+  line-height: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+

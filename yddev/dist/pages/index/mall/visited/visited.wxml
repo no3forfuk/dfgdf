@@ -1,0 +1,4 @@
+<!--pages/index/mall/visited/visited.wxml-->
+<view style="padding: 0 15.08rpx;">
+    <goods-list goods-list="{{lists}}"></goods-list>
+</view>

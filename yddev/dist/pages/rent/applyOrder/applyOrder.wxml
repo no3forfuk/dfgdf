@@ -1,0 +1,20 @@
+<view class="unpaid-item" bindtap="ontoggledesc">
+    <view class="unpaid-label">
+        <text style="margin-left:22rpx;">{{unpaidInfo.order_title}}</text>
+    </view>
+    <text class="unpaid-fee">￥{{unpaidInfo.order_amount}}</text>
+</view>
+<view class="unpaid-item-desc">
+    <view class="fee-num-box">费用编号：{{unpaidInfo.cost_no}}</view>
+    <view class="fee-num-box">{{unpaidInfo.order_intro}}</view>
+    <view class="time-unit">
+        <view>
+            <text class="fee-num">时段：</text>
+            <text class="fee-value">{{unpaidInfo.time_slot}}</text>
+        </view>
+        <view>
+            <text class="fee-num">单位：</text>
+            <text class="fee-value">{{unpaidInfo.type_unit_value}}({{unpaidInfo.type_unit}})</text>
+        </view>
+    </view>
+</view>

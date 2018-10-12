@@ -1,0 +1,12 @@
+<active wx:if="{{currentPage === 'active'}}" id="active"></active>
+<circle wx:if="{{currentPage === 'circle'}}"
+        id="circle"
+        bindhideTabbar="hideTabbar"
+        bindshowTabbar="showTabbar"></circle>
+<mall wx:if="{{currentPage === 'mall'}}" id="mall"></mall>
+<mine wx:if="{{currentPage === 'mine'}}" id="mine"></mine>
+<view animation="{{animationData}}" class="tabbar-box">
+    <tab-bar items="{{tabBarItems}}"
+             current="0"
+             bindchange="switchTabbar"></tab-bar>
+</view>

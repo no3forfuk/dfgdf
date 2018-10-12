@@ -1,0 +1,65 @@
+<!--pages/post/post.wxml-->
+<view class="post-page">
+    <scroll-view class="post-page-content">
+        <view class="post-card">
+            <view class="post-card-left">
+                <image class="post-card-left-img" src="{{info.head_image_url}}"></image>
+            </view>
+            <view class="post-card-right">
+                <view class="post-card-right-name">{{info.nick}}</view>
+                <view class="post-card-right-content">{{info.content}}</view>
+                <view class="post-card-right-imgs" style="width:{{info.atlas_list.length>3?'400rpx':'100%'}};">
+                    <image class="post-card-right-img"
+                           wx:for="{{info.atlas_list}}"
+                           wx:key="{{index}}"
+                           mode="aspectFill"
+                           src="{{item.image_path}}"
+                           bindtap="onviewimg"
+                           data-index="{{index}}"></image>
+                </view>
+                <view class="post-created-time">{{info.add_time}}</view>
+            </view>
+        </view>
+        <view class="post-comment-ul">
+            <view class="post-comment-ul-title">
+                <text>评论</text>
+                <image class="post-comment-ul-title-icon" bindtap="commentPost"></image>
+            </view>
+            <block wx:for="{{commentList}}" wx:key="{{index}}">
+                <view class="post-comment-li" bindtap="c2c" data-item="{{item}}">
+                    <view class="post-card-left">
+                        <image class="post-card-left-img" src="{{item.head_image_url}}"></image>
+                    </view>
+                    <view class="post-card-right">
+                        <view class="post-comment-user-name">
+                            <view>
+                                <text>{{item.nick}}</text>
+                                <text class="post-comment-user-report" wx:if="{{item.pid!=0}}">回复</text>
+                                <text class="post-comment-user-to" wx:if="{{item.pid!=0}}">{{item.to_nick}}</text>
+                            </view>
+                            <text style="color:#929292;font-size:8px;font-weight:normal;">{{item.add_time}}</text>
+                        </view>
+                        <view class="post-comment-content">
+                            {{item.content}}
+                        </view>
+                    </view>
+                </view>
+            </block>
+        </view>
+        <view style="width: 100%;height: 92.92rpx;"></view>
+    </scroll-view>
+    <view class="post-page-comment">
+        <view class="post-page-input-box">
+            <view class="post-page-input-placeholder">
+                <text class="post-page-input-placeholder-hf">{{pid!=0?'回复':'评论:'}}</text>
+                <text class="post-page-input-placeholder-name" wx:if="{{pid!=0}}">{{toUser}}:</text>
+            </view>
+            <input class="post-page-input" cursor-spacing="5" bindinput="oninputcomment" value="{{commentText}}"></input>
+        </view>
+        <view class="post-page-send-btn" bindtap="onsubmitcomment"
+              style="color:{{commentText.length>0?'#666':'#d1d1d1'}};">
+            <text>发送</text>
+        </view>
+
+    </view>
+</view>

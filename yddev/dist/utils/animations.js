@@ -1,0 +1,1 @@
+"use strict";const slideUp=function(n){var t=wx.createAnimation({duration:500,timingFunction:"ease"});t.translateY(0).step(),n(t)},slideDown=function(n){var t=wx.createAnimation({duration:500,timingFunction:"ease"});t.translateY("100%").step(),n(t)};module.exports={slideUp:slideUp,slideDown:slideDown};

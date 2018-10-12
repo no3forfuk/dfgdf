@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "activity": "./activity/activity",
+    "award": "./award/award",
+    "tab": "/components/tab/tab"
+  }
+}

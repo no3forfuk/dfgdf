@@ -1,0 +1,50 @@
+/* pages/addPost/addPost.wxss */
+@import "../../static/css/mixin.scss";
+
+.add-post-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0 rpx(25.94);
+  font-size: 14.67px;
+  color: #0060ff;
+}
+
+.add-post-textarea {
+  padding: 0 rpx(25.94);
+  width: 100%;
+  height: rpx(258.84);
+  font-size: 14px;
+  color: #111;
+  margin-top: rpx(19.91);
+}
+
+.add-post-textarea-value {
+  width: 100%;
+  height: 100%;
+  padding: 0 2px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid rgba(115, 115, 115, 0.3);
+  box-sizing: border-box;
+}
+
+.add-post-img-box {
+  width: 100%;
+  padding: rpx(25.94);
+}
+
+.add-post-add-img {
+  width: rpx(109.81);
+  height: rpx(109.81);
+  border-radius: 5px;
+  border: 1px solid rgba(177, 177, 177, 0.3);
+  background-color: #ccc;
+}
+
+.add-post-img-result {
+  width: rpx(109.81);
+  height: rpx(109.81);
+  border-radius: 5px;
+  margin-right: 10px;
+}

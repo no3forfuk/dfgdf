@@ -1,0 +1,23 @@
+<!--pages/goodsAppraise/goodsAppraise.wxml-->
+<scroll-view scroll-y class="goods-appraise">
+    <view class="appraise-title">
+        <text>筛选：</text>
+        <text>时间优先</text>
+    </view>
+    <block wx:for="{{appraiseList}}" wx:key="{{index}}">
+        <view class="appraise-item">
+            <view class="item-left">
+                <image class="item-left-img"></image>
+            </view>
+            <view class="item-right">
+                <view class="item-right-name-time">
+                    <text class="item-right-name">圆点租户</text>
+                    <text class="item-right-time">2018-8-31</text>
+                </view>
+                <view></view>
+                <view class="appraise-content">用起来感觉挺护眼的，比我原先的台灯用起来舒服很多。另外，管
+家直接放在门口，别的快递要送上来还比较麻烦点。</view>
+            </view>
+        </view>
+    </block>
+</scroll-view>

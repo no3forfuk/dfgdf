@@ -1,0 +1,43 @@
+<scroll-view class="mine-scroll-view"
+             enable-back-to-top="true"
+             style="height:{{scrollViewHeight}}px;"
+             scroll-y="true">
+    <view class="mine-scroll-view-top">
+        <image src="" class="mine-scroll-view-top-img"></image>
+        <text class="mine-scroll-view-top-name"></text>
+        <text class="mine-scroll-view-top-desc"></text>
+    </view>
+    <view class="mine-exit-options">
+        <block wx:for="{{operateData}}" wx:key="{{index}}">
+            <view class="operate-items" style="width:{{100/operateData.length}}%;" bindtap="clickExitItem" data-item="{{item}}">
+                <text class="operate-items-img iconfont {{item.icon}}" style="font-size: {{item.fontSize}}"></text>
+                <text class="operate-items-text">{{item.label}}</text>
+            </view>
+            <view class="shuxian" wx:if="{{index < operateData.length-1 || index == 0}}"></view>
+        </block>
+    </view>
+    <!-- 租客部分 -->
+    <view class="mine-renter-options">
+        <block wx:for="{{renterData}}" wx:key="{{index}}">
+            <navigator class="renter-items" url="{{item.href}}" data-target="{{item.label}}">
+                <view class="renter-items-icon">
+                    <text class="renter-items-img iconfont {{item.icon}}"></text>
+                </view>
+                <text class="renter-items-text {{index == renterData.length-1? 'border-none' : ''}}">{{item.label}}</text>
+            </navigator>
+        </block>
+    </view>
+    <!-- 房东部分 -->
+    <view class="mine-renter-options">
+        <block wx:for="{{landlordData}}" wx:key="{{index}}">
+            <navigator class="renter-items" url="{{item.href}}" data-target="{{item.label}}">
+                <view class="renter-items-icon">
+                    <text class="renter-items-img iconfont {{item.icon}}" style="font-size: {{item.fontSize}}"></text>
+                </view>
+                <text class="renter-items-text {{index == landlordData.length-1? 'border-none' : ''}}">{{item.label}}</text>
+            </navigator>
+        </block>
+    </view>
+    <!-- footer placeholder  -->
+    <view style="height:90.5rpx;width:100%;"></view>
+</scroll-view>

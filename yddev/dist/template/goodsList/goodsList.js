@@ -1,0 +1,1 @@
+Component({properties:{goodsList:{type:Array,value:[],observer(e,t,s){e.length>0&&this.setData({cellList:e})}}},data:{cellList:[]},methods:{}});

@@ -1,0 +1,1 @@
+Page({data:{appraiseList:[{},{}]},onLoad:function(n){wx.setTopBarText({text:"商品评价"})},onReady:function(){},onShow:function(){},onHide:function(){},onUnload:function(){},onPullDownRefresh:function(){},onReachBottom:function(){},onShareAppMessage:function(){}});

@@ -1,0 +1,1 @@
+const app=getApp();Page({data:{details:{}},onLoad:function(n){wx.setNavigationBarTitle({title:"活动详情"})},onReady:function(){},onShow:function(){},onHide:function(){},onUnload:function(){},onPullDownRefresh:function(){},onReachBottom:function(){},onShareAppMessage:function(){}});

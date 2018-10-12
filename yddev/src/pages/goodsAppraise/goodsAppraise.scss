@@ -1,0 +1,67 @@
+/* pages/goodsAppraise/goodsAppraise.wxss */
+
+.goods-appraise {
+    width: 100%;
+    height: 100%;
+}
+
+.appraise-title {
+    font-size: 14px;
+    padding: 18.12rpx;
+    width: 100%;
+}
+
+.appraise-item:nth-child(1) {
+    padding-top: 0;
+}
+
+.appraise-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 24.15rpx 0;
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.appraise-item:nth-last-child(1) {
+    border-bottom: 0 none;
+}
+
+.item-left {
+    width: 90rpx;
+    padding: 0 13.89rpx;
+}
+
+.item-left-img {
+    width: 61.59rpx;
+    height: 61.59rpx;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.item-right {
+    width: calc(100% - 90rpx);
+    padding-right: 24.15rpx;
+}
+
+.item-right-name-time {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-right-name {
+    font-size: 14px;
+}
+
+.item-right-time {
+    font-size: 10px;
+}
+
+.appraise-content {
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+}

@@ -1,0 +1,25 @@
+<!--pages/houseResources/houseResources.wxml-->
+<scroll-view class="resources-page" scroll-y="true" bindscroll="onpagescroll">
+    <block wx:for="{{resourcesData}}" wx:key="{{index}}">
+        <navigator class="resources-item"
+                   url="/pages/houseDetails/houseDetails?id={{item.house_id}}"
+                   hover-class="none">
+            <view class="resources-item-img">
+                <image src="{{item.image_url}}" class="resources-item-pic" lazy-load="true"></image>
+                <view class="resources-item-sale" wx:if="{{item.discount_rate}}">{{item.discount_rate}}</view>
+            </view>
+            <view class="resources-item-info">
+                <view class="resources-item-name">{{item.title}}</view>
+                <view class="resources-item-keywords">{{item.apartment_title}} | {{item.apartment_store_title}} |
+                    {{item.contract_cycle_name}}
+                </view>
+                <view class="resources-item-price">
+                    <text class="resources-item-price-text">￥{{item.market_price}}/{{item.price_unit}}</text>
+                    <view class="resources-item-price-btn" catchtap="collect" data-id="{{item.house_id}}">已收藏</view>
+                </view>
+            </view>
+        </navigator>
+    </block>
+    <!-- footer placeholder  -->
+    <!--<view style="height:90.5rpx;width:100%;"></view>-->
+</scroll-view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "edit-address": "./editAddress/editAddress",
+    "select-address": "./selectAddress/selectAddress"
+  }
+}

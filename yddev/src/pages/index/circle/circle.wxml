@@ -1,0 +1,52 @@
+<tab items="{{tabItems}}" bindchange="swithTab" current="0"></tab>
+<view class="circle-header">
+    <view class="circle-header-left" bindtap="addPost">
+        <image src="" class="circle-header-left-icon"></image>
+    </view>
+    <view class="circle-header-right">
+        <view class="circle-header-right-first" style="opacity: {{1 - floatIndex}};">
+            <image src="" class="circle-header-right-first-img" src="{{currentPeople.head_image_url}}"></image>
+            <image class="circle-header-right-first-icon"></image>
+        </view>
+        <scroll-view class="circle-header-right-scroll"
+                     scroll-left="{{scrollLeft}}"
+                     scroll-x="true"
+                     bindscroll="scrollUserPhoto"
+                     bindtouchend="scrollEnd">
+            <view class="circle-header-right-scroll-box">
+                <view class="photo-first"
+                      bindtap="go2Users"
+                      data-item="{{currentPeople}}">
+                    <image class="photo-first-icon"
+                           catchtap="focusPeople"
+                           data-item="{{currentPeople}}"></image>
+                </view>
+                <view class="circle-header-right-scroll-box-item"
+                      wx:for="{{hotPeople}}"
+                      style="opacity: {{index < photoIndex? 0:1}};"
+                      wx:key="{{index}}">
+                    <image class="circle-header-right-scroll-box-item-img"
+                           src="{{item.head_image_url}}"
+                           bindtap="go2Users"
+                           data-item="{{item}}"></image>
+                    <image class="circle-header-right-scroll-box-item-icon"
+                           catchtap="focusPeople"
+                           data-item="{{item}}"></image>
+                </view>
+                <view class="circle-header-right-scroll-box-placeholder"></view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<scroll-view scroll-y="true"
+             class="circle-scroll-view"
+             enable-back-to-top="true"
+             bindscroll="circelScroll"
+             bindscrolltolower="scrolltolower"
+             lower-threshold="50"
+             style="height:{{scrollViewHeight}}px;">
+    <block wx:for="{{postList}}" wx:key="{{index}}">
+        <post-card post-info="{{item}}" bindpraiseConfirm="getPostList" to-user="true"></post-card>
+    </block>
+    <view style="height:90.5rpx;width:100%;"></view>
+</scroll-view>

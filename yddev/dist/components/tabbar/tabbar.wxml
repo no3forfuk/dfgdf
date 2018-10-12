@@ -1,0 +1,16 @@
+<view class="tabbar-component">
+    <block wx:for="{{items}}" wx:key="{{index}}">
+        <view class="tabbar-component-items"
+              bindtap="ontapitem"
+              data-item="{{item}}"
+              data-index="{{index}}"
+              style="width:calc(100% / {{items.length}});">
+            <view  class="tabbar-component-items-icon">
+                <text class="iconfont {{item.icon}} iconfont-icon"></text>
+            </view>
+            <text class="tabbar-component-items-text"
+                  style="color:{{current === index? '#000':'#999'}};">{{item.label}}</text>
+            <view class="tabbar-component-items-dot" wx:if="{{current === index}}"></view>
+        </view>
+    </block>
+</view>

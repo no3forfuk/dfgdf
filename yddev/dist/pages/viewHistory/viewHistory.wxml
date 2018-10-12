@@ -1,0 +1,32 @@
+<!--pages/houseResources/houseResources.wxml-->
+<view class="order-header">
+    <block wx:for="{{headerData}}" wx:key="{{index}}">
+        <view class="order-header-item" style="width:{{100/headerData.length}}%;" bindtap="onchangefeetype" data-index="{{index}}">
+            <text class="header-item-text {{index == feeCurrent?'current-class':''}}">{{item.text}}</text>
+        </view>
+        <view style="width: 1px;height: 38rpx;background-color: #f2f2f2;" wx:if="{{index < headerData.length-1 || index == 0}}"></view>
+    </block>
+    <view class="fee-mark" style="width:{{markStyle.width}}px;transform: translateX({{markStyle.left}}px)"></view>
+</view>
+<scroll-view class="resources-page" scroll-y="true" bindscroll="onpagescroll">
+    <block wx:for="{{resourcesData}}" wx:key="{{index}}">
+        <navigator class="resources-item" url="/pages/houseDetails/houseDetails?id={{item.id}}">
+            <view class="resources-item-img">
+                <image src="{{item.img}}" class="resources-item-pic" lazy-load="true"></image>
+                <view class="resources-item-sale">-30%</view>
+            </view>
+            <view class="resources-item-info">
+                <view class="resources-item-name">{{item.name}}</view>
+                <view class="resources-item-keywords">{{item.keywords}}</view>
+                <view class="resources-item-price">
+                    <text class="resources-item-price-text">￥{{item.price}}/月</text>
+                    <view class="resources-item-price-btn" catchtap="oncollect">
+                        <text>收藏</text>
+                    </view>
+                </view>
+            </view>
+        </navigator>
+    </block>
+    <!-- footer placeholder  -->
+    <view style="height:90.5rpx;width:100%;"></view>
+</scroll-view>

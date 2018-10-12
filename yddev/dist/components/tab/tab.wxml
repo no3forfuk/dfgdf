@@ -1,0 +1,8 @@
+<view class="tab-component">
+    <block wx:for="{{items}}" wx:key="{{index}}">
+        <view class="tab-component-items" bindtap="ontapitem" data-index="{{index}}" data-item="{{item}}">
+            <text class="tab-component-items-text {{current == index ? 'active':''}}">{{item.label}}</text>
+        </view>
+    </block>
+    <view class="tab-mark" style="width:{{markStyle.width}}px;transform: translateX({{markStyle.left}}px)"></view>
+</view>

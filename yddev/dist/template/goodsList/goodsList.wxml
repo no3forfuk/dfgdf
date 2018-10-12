@@ -1,0 +1,23 @@
+<!--template/goodsList/goodsList.wxml-->
+<view class="hotcell-list">
+    <view class="hotcell-list-left">
+        <navigator wx:for="{{cellList}}" url="/pages/goods/goods?goodsId={{item.commodity_id}}" wx:key="{{index}}" class="hot-cell-item" wx:if="{{index % 2 == 0}}">
+            <image class="hot-cell-item-img" mode="widthFix" src="{{item.img}}" lazy-load="true"></image>
+            <view class="hot-cell-item-name">
+                <text>{{item.commodity_name}}</text>
+                <text class="hot-cell-item-price">￥ {{item.commodity_price}}</text>
+            </view>
+            <view class="hot-cell-item-desc">{{item.commodity_synopsis}}</view>
+        </navigator>
+    </view>
+    <view class="hotcell-list-right">
+        <navigator wx:for="{{cellList}}" url="/pages/goods/goods?goodsId={{item.commodity_id}}" wx:key="{{index}}" class="hot-cell-item" wx:if="{{index % 2 == 1}}">
+            <image class="hot-cell-item-img" mode="widthFix" src="{{item.img}}" lazy-load="true"></image>
+            <view class="hot-cell-item-name">
+                <text>{{item.commodity_name}}</text>
+                <text class="hot-cell-item-price">￥ {{item.commodity_price}}</text>
+            </view>
+            <view class="hot-cell-item-desc">{{item.commodity_synopsis}}</view>
+        </navigator>
+    </view>
+</view>

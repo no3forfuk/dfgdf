@@ -1,0 +1,301 @@
+/* pages/houseDetails/houseDetails.wxss */
+@import "../../static/css/mixin.scss";
+@import "../../static/css/picon.scss";
+
+.resources-details-page {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
+
+.details-swiper {
+  width: 100%;
+  height: rpx(436);
+  overflow: hidden;
+}
+
+.swiper-item-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 通用样式 */
+
+.base-card {
+  width: 100%;
+  padding: rpx(18) rpx(38);
+  background-color: #eee;
+  margin-top: 7px;
+}
+
+.base-label {
+  font-size: 16px;
+  font-weight: bolder;
+  color: #424242;
+  line-height: 22px;
+}
+
+/* info */
+
+.details-info {
+  width: 100%;
+  padding: rpx(20) rpx(38);
+  background-color: #fff;
+}
+
+.info-name {
+  font-size: 18px;
+  color: #424242;
+  line-height: 25px;
+  font-weight: bolder;
+}
+
+.info-reason {
+  font-size: 12px;
+  color: #999;
+  line-height: 17px;
+}
+
+.info-price {
+  font-size: 18px;
+  color: #ff534e;
+  line-height: 25px;
+  font-weight: bolder;
+  margin-top: 9px;
+}
+
+/* position */
+
+.position-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 14px;
+  color: #999;
+  line-height: 20px;
+  margin-top: 7px;
+}
+
+.position-content-text {
+  margin-left: 5px;
+}
+
+/* date */
+
+/* 房源信息 */
+
+.house-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.house-content-item {
+  width: 50%;
+}
+
+.house-content-item-label {
+  font-size: 14px;
+  line-height: 20px;
+  color: #878787;
+}
+
+.house-content-item-text {
+  font-size: 14px;
+  color: #424242;
+  line-height: 20px;
+  margin-left: 5px;
+}
+
+/* room */
+
+.room-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: rpx(40);
+}
+
+.room-content-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.room-content-item-text {
+  color: #424242;
+  font-size: 13px;
+  line-height: 18px;
+  margin-top: rpx(24.6);
+}
+
+.room-item-img {
+  width: rpx(46.8);
+  height: rpx(46.8);
+  background-color: #eee;
+}
+
+/* hardware */
+
+.hardware-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: rpx(24.6);
+}
+
+.hardware-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hardware-img {
+  width: rpx(60);
+  height: rpx(60);
+  background-color: #eee;
+}
+
+.hardware-text {
+  font-size: 13px;
+  line-height: 18px;
+  color: #424242;
+  margin-top: 5px;
+}
+
+/* likeness */
+
+.likeness-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: rpx(18.1);
+}
+
+.likeness-item {
+  width: 50%;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.likeness-item:nth-child(odd) {
+  padding-right: 5px;
+}
+
+.likeness-item:nth-child(even) {
+  padding-left: 5px;
+}
+
+.likeness-img {
+  width: 100%;
+  height: rpx(244);
+  background-color: #eee;
+}
+
+.likeness-type {
+  font-size: 15px;
+  line-height: 21px;
+  color: #424242;
+  margin-top: 4px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.likeness-posi {
+  font-size: 12px;
+  line-height: 17px;
+  color: #999;
+  margin-top: 1px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.likeness-price {
+  font-size: 15px;
+  line-height: 21px;
+  color: #fe514c;
+  margin-top: 2px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* footer */
+
+.details-page-footer {
+  width: 100%;
+  padding: rpx(12) rpx(30);
+  display: flex;
+  height: rpx(98);
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: flex-end;
+  border-top: 1px solid #eee;
+}
+
+.footer-collect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: rpx(74);
+}
+
+.footer-collect-img {
+  width: rpx(36.2);
+  height: rpx(36.2);
+  background-color: #eee;
+}
+
+.footer-collect-text {
+  font-size: 10px;
+  color: #a1a1a1;
+  line-height: 14px;
+}
+
+.footer-order {
+  height: 100%;
+  width: rpx(240);
+  background-color: #ffbc73;
+  border-radius: 4px;
+  color: #fff;
+  line-height: rpx(72);
+  font-size: 14px;
+  text-align: center;
+  margin-right: rpx(45.25);
+}
+
+.footer-pay {
+  height: 100%;
+  width: rpx(240);
+  background-color: #fe514c;
+  border-radius: 4px;
+  color: #fff;
+  line-height: rpx(72);
+  font-size: 14px;
+  text-align: center;
+  margin-right: rpx(20);
+}
+
+.footer-collect-icon {
+  color: #a1a1a1;
+  text-shadow: 0 0 5px #d1d1d1;
+  font-size: 18px;
+}
+
+.isCollected {
+  color: #fe514c;
+  text-shadow: 0 0 5px #fff;
+}

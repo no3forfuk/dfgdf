@@ -1,0 +1,147 @@
+/* pages/houseResources/houseResources.wxss */
+
+.resources-page {
+    width: 100%;
+    height: 100%;
+    padding-left: 40rpx;
+}
+
+.resources-item {
+    width: 100%;
+    height: 244rpx;
+    display: flex;
+    flex-direction: row;
+    padding: 30rpx 0;
+    border-top: 1px solid #f2f2f2;
+}
+
+.resources-item:nth-child(1) {
+    border-top: 0 none;
+}
+
+.resources-item-img {
+    width: 270rpx;
+    height: 100%;
+    background-color: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.resources-item-pic {
+    width: 100%;
+    height: 100%;
+}
+
+.resources-item-sale {
+    width: 80rpx;
+    height: 28rpx;
+    background-color: #3d9689;
+    color: #fff;
+    font-size: 12px;
+    line-height: 28rpx;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.resources-item-info {
+    height: 100%;
+    width: calc(100% - 270rpx);
+    padding-left: 24rpx;
+}
+
+.resources-item-name {
+    font-size: 15px;
+    line-height: 21px;
+    color: #424242;
+}
+
+.resources-item-keywords {
+    font-size: 12px;
+    color: #999;
+    line-height: 17px;
+    margin-top: 52rpx;
+}
+
+.resources-item-price {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 54rpx;
+    height: 42rpx;
+    align-items: center;
+    margin-top: 18rpx;
+}
+
+.resources-item-price-text {
+    font-size: 15px;
+    color: #ff534e;
+    font-weight: bold;
+}
+
+.resources-item-price-btn {
+    width: 100rpx;
+    height: 40rpx;
+    border-radius: 40rpx;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    border: 1px solid #3d9689;
+    color: #3d9689;
+}
+
+.order-header {
+    width: 100%;
+    height: 88rpx;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.header-item-text {
+    font-size: 14px;
+    line-height: 20px;
+    color: #999;
+}
+
+.order-body {
+    width: 100%;
+}
+
+.order-header-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    height: 100%;
+}
+
+.current-class {
+    color: #3d9689;
+}
+
+.fee-mark {
+    height: 4rpx;
+    width: 100rpx;
+    background-color: #3d9689;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.3s;
+}
+
+.collected {
+    background-color: #3d9689;
+    color: #fff;
+    border: 0 none;
+}

@@ -1,0 +1,4 @@
+<!--pages/promotion/promotion.wxml-->
+<view class="promotion-component">
+    <text style="color: #ccc;font-size: 14px;">暂无活动</text>
+</view>

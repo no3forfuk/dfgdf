@@ -1,0 +1,33 @@
+<!--pages/myOrder/unpaid/unpaid.wxml-->
+
+<view class="paid-syno" bindtap="ontoggledesc">
+    <view class="syno-left">
+        <view class="unpaid-label-icon {{isSelected?'selected':''}}" catchtap="selectItem"></view>
+        <view class="syno-left-content">
+            <text class="syno-left-name">圆点-坪洲店-305（押一付一）</text>
+            <text class="syno-left-enter-time">入住时间：2017-09-27</text>
+            <text class="syno-left-leave-time">离开时间：2017-09-27</text>
+        </view>
+    </view>
+    <view class="syno-right">
+        <view class="syno-right-top">
+            <text class="syno-right-text">未支付</text>
+            <text class="syno-right-num">￥299</text>
+        </view>
+        <text class="iconfont yd-icon syno-right-icon" style="transform:rotateZ({{showDesc?180:0}}deg);"></text>
+    </view>
+</view>
+<view class="paid-detail" animation="{{animationData}}">
+    <view class="detail-title">
+        <text class="detail-title-text">订单编号：889588745674</text>
+        <text class="detail-title-text">订单失效时间：23：59：18</text>
+    </view>
+    <view class="detail-content">
+        <block wx:for="{{detailData}}" wx:key="{{index}}">
+            <view class="detail-content-item">
+                <text class="content-item-label">{{item.label}}</text>
+                <text class="content-item-text">{{item.text}}</text>
+            </view>
+        </block>
+    </view>
+</view>

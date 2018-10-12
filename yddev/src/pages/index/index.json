@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "active": "./active/active",
+    "circle": "./circle/circle",
+    "mall": "./mall/mall",
+    "mine": "./mine/mine",
+    "tab-bar": "/components/tabbar/tabbar"
+  }
+}

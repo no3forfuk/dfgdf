@@ -1,0 +1,35 @@
+@import "../../static/css/mixin.scss";
+
+.tab-component {
+  width: 100%;
+  border-bottom: rpx(0.6) solid #ebebeb;
+  position: relative;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0 rpx(18.1);
+  &-items {
+    padding: 0 rpx(18.1);
+    color: #808080;
+    &-text {
+      font-size: 15px;
+      line-height: 15px;
+    }
+  }
+}
+
+.tab-mark {
+  width: 12px;
+  height: 2.41px;
+  border-radius: 1.21px;
+  background-color: #2c85f4;
+  position: absolute;
+  bottom: -1px;
+  left: rpx(0);
+  transition: all 0.3s;
+}
+
+.active {
+  color: #2c85f4;
+}

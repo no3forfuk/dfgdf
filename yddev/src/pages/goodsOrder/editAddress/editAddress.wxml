@@ -1,0 +1,58 @@
+<view class="address-title">
+    <text class="address-title-label">编辑收货地址</text>
+    <text class="address-title-comfirm" bindtap="backPrev">完成</text>
+</view>
+<view class="address-list">
+    <block wx:for="{{addressList}}" wx:key="{{index}}">
+        <view class="address-list-item">
+            <image class="address-list-item-del"></image>
+            <view class="address-list-item-info">
+                <text class="address-list-item-info-ad">{{item.consignee}}，{{item.province}}-{{item.city}}-{{item.area}}-{{item.address}}</text>
+                <text class="address-list-item-info-tel">Tel:{{item.consignee_mobile}}</text>
+            </view>
+            <text class="address-list-item-edit" bindtap="startEdit" data-item="{{item}}">编辑</text>
+        </view>
+    </block>
+</view>
+<!--新增地址按钮-->
+<view class="address-add-title">
+    <image class="address-add-title-icon" src=""></image>
+    <text class="address-add-title-text" bindtap="startAdd">新增收货地址</text>
+</view>
+<!--新增地址表单-->
+<view class="address-add-content" wx:if="{{editType !== 0}}">
+    <view class="address-add-title">
+        <image class="address-add-title-icon" src=""></image>
+        <text class="address-add-title-text">{{editType == 1?'新增':'编辑'}}收货地址</text>
+    </view>
+    <view class="address-add-content-item">
+        <view class="address-add-content-item-user">
+            <input type="text"
+                   class="address-add-content-item-user-name"
+                   bindinput="setConsignee"
+                   value="{{editType == 2?consignee:''}}"
+                   placeholder="姓名"></input>
+            <input type="number"
+                   bindinput="setMobilePhone"
+                   maxlength="11"
+                   value="{{editType == 2?mobile:''}}"
+                   class="address-add-content-item-user-phone"
+                   placeholder="联系方式"></input>
+        </view>
+        <picker bindchange="areaChange"
+                mode="region">
+            <view class="address-add-content-item-province">
+                <text wx:if="{{editType == 1}}">{{isSelectRegion?'':'请选择 省，市，区'}}{{regions[0]}} {{regions[1]}} {{regions[2]}}</text>
+                <text wx:if="{{editType == 2}}">{{regions[0]}} {{regions[1]}} {{regions[2]}}</text>
+            </view>
+        </picker>
+        <input type="text"
+               bindinput="setAddress"
+               class="address-add-content-item-address"
+               value="{{editType == 2?address:''}}"
+               placeholder="详细地址"></input>
+        <view class="add-address-comfirm">
+            <text bindtap="addReceiveAddress">完成</text>
+        </view>
+    </view>
+</view>

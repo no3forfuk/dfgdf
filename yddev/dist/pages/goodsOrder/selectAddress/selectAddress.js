@@ -1,0 +1,1 @@
+const app=getApp();Component({properties:{list:{type:Array,value:[]}},data:{selectIndex:0},attached(){},methods:{selectAddress(e){this.triggerEvent("closeSelectAddress",{id:e.detail.value})},goEdit(){this.triggerEvent("goEdit")}}});

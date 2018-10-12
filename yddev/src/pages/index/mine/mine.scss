@@ -1,0 +1,107 @@
+@import "../../../static/css/mixin.scss";
+@import "../../../static/css/picon.scss";
+
+.mine-scroll-view {
+  width: 100%;
+  background-color: #f4f4f4;
+  &-top {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    &-img {
+      width: rpx(162);
+      height: rpx(162);
+      border-radius: 50%;
+      background-color: #f1f1f1;
+    }
+    &-name {
+      font-weight: 700;
+      font-size: 16px;
+    }
+    &-desc {
+      font-weight: 400;
+      font-size: 14px;
+    }
+  }
+}
+
+.mine-exit-options {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #fff;
+  padding: rpx(20) 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  .operate-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    &-img {
+      width: rpx(60);
+      height: rpx(60);
+      color: #d1d1d1;
+      font-weight: 400;
+    }
+    &-text {
+      font-size: 12px;
+      color: #999;
+      line-height: 16px;
+      margin-top: 6px;
+    }
+  }
+  .shuxian {
+    width: 1px;
+    height: rpx(50);
+    background-color: #f2f2f2;
+    /* background-color: #000; */
+  }
+}
+
+/* 租客部分 */
+
+.mine-renter-options {
+  width: 100%;
+  background-color: #fff;
+  margin-top: 7px;
+}
+
+.renter-items {
+  width: 100%;
+  height: rpx(87);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.renter-items-icon {
+  width: rpx(90);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.renter-items-text {
+  width: calc(100% - #{rpx(90)});
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 16px;
+  height: 100%;
+  line-height: rpx(87);
+  color: #424242;
+}
+
+.renter-items-img {
+  width: rpx(36);
+  height: rpx(36);
+  color: #a1a1a1;
+}
+
+.border-none {
+  border-bottom: 0 none;
+}

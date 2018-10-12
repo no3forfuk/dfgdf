@@ -1,0 +1,18 @@
+<view class="select-address-title">
+    <text class="select-address-title-label">选择收货地址</text>
+    <text class="select-address-title-edit" bindtap="goEdit">编辑</text>
+</view>
+<view class="select-address-components">
+    <radio-group style="width: 100%;" bindchange="selectAddress">
+        <block wx:for="{{list}}" wx:key="{{index}}">
+            <view class="select-address-item">
+                <label class="radio-label">
+                    <radio color="#fafafa" checked="{{index == selectIndex ? true : false}}" value="{{item.address_id}}" />
+                    <text class="radio-text">{{item.consignee}}，{{item.province}}-{{item.city}}-{{item.area}}-{{item.address}}
+                    </text>
+                </label>
+                <view>Tel:{{item.consignee_mobile}}</view>
+            </view>
+        </block>
+    </radio-group>
+</view>

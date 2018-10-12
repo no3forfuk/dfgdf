@@ -1,0 +1,17 @@
+<!--pages/addPost/addPost.wxml-->
+<view class="add-post-header">
+    <view bindtap="oncancel">取消</view>
+    <view bindtap="oncomfirm" style="color:{{postImgList.length === 0 && postText.length === 0 ? 'rgba(0,96,255,0.2)':'rgba(0,96,255,1)'}};">完成</view>
+</view>
+<view class="add-post-textarea">
+    <textarea class="add-post-textarea-value" bindinput="oninputtext"></textarea>
+</view>
+<view class="add-post-img-box">
+    <image wx:for="{{postImgList}}"
+           wx:key="{{index}}"
+           src="{{item.path}}"
+           bindtap="changeThisImg"
+           data-index="{{index}}"
+           class="add-post-img-result"></image>
+    <view class="add-post-add-img" bindtap="onchooseimg"></view>
+</view>

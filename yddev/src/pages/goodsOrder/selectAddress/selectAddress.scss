@@ -1,0 +1,83 @@
+@import "../../../static/css/mixin.scss";
+
+.select-address-title {
+  width: 100%;
+  padding: rpx(18.1);
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: bold;
+  &-label {
+    color: #878787;
+  }
+  &-edit {
+    color: #111111;
+  }
+}
+
+.select-address-components {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.select-address-item {
+  width: 100%;
+  border-top: 1px solid #f1f1f1;
+  padding: rpx(18.1);
+}
+
+.select-address-item:nth-child(1) {
+  border-top: 0 none;
+}
+
+.radio-text {
+  width: 100%;
+  margin-left: 8px;
+}
+
+radio {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+radio .wx-radio-input {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  border: none; /* 替换边框（隐藏原有边框） */
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+radio .wx-radio-input.wx-radio-input-checked {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  overflow: visible;
+  transform: translate(0, 0) scale(1);
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #888;
+  font-size: 0;
+}

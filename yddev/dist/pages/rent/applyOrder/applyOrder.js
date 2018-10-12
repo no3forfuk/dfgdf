@@ -1,0 +1,1 @@
+const app=getApp();Component({properties:{unpaidInfo:{type:Object,value:{},observer(e,o,t){console.log(e)}}},data:{},attached(){},methods:{}});

@@ -1,0 +1,109 @@
+@import "../../../static/css/mixin.scss";
+
+.circle-header {
+  width: 100%;
+  height: rpx(130.32);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: rpx(0.6) solid #f1f1f1;
+  &-left {
+    width: rpx(112.22);
+    height: rpx(105.59);
+    border-right: rpx(0.6) solid #cbcbcb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    &-icon {
+      width: rpx(56.72);
+      height: rpx(47.06);
+      background-color: #eee;
+    }
+  }
+  &-right {
+    height: 100%;
+    width: calc(100% - #{rpx(112.22)});
+    padding-left: 10px;
+    padding-top: rpx(10.86);
+    padding-bottom: rpx(18.1);
+    position: relative;
+    &-first {
+      width: rpx(100);
+      height: rpx(100);
+      position: absolute;
+      top: rpx(10.86);
+      left: 10px;
+      &-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background-color: #666;
+      }
+      &-icon {
+        width: rpx(26);
+        height: rpx(26);
+        background-color: red;
+        border-radius: 50%;
+        transform: translate(#{rpx(70)}, #{rpx(-52)});
+      }
+    }
+    &-scroll {
+      width: 100%;
+      height: 100%;
+      &-box {
+        height: 100%;
+        padding-left: calc(10px + #{rpx(100)});
+        white-space: nowrap;
+        position: relative;
+        &-item {
+          display: inline-block;
+          width: rpx(100);
+          height: rpx(100);
+          margin-right: 10px;
+          &-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #ccc;
+          }
+          &-icon {
+            width: rpx(26);
+            height: rpx(26);
+            background-color: red;
+            border-radius: 50%;
+            transform: translate(calc(#{rpx(-12)} - 10px), #{rpx(-1)});
+          }
+        }
+        &-placeholder {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.photo-first {
+  width: rpx(100);
+  height: rpx(100);
+  border-radius: 50%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+}
+
+.photo-first-icon {
+  width: rpx(26);
+  height: rpx(26);
+  background-color: green;
+  border-radius: 50%;
+  transform: translate(calc(#{rpx(100)} - 17px), rpx(63));
+}
+
+.circle-scroll-view {
+  width: 100%;
+}

@@ -1,0 +1,28 @@
+<!--pages/index/active/activity/activity.wxml-->
+<view class="active-activity-component">
+    <navigator class="top-active" url="/pages/promotion/promotion">
+        <image src="{{}}" class="top-active-img"></image>
+    </navigator>
+    <view class="classify-active">
+        <block wx:for="{{classifyData.items}}" wx:key="{{item.key}}">
+            <navigator class="classify-active-items" url="/pages/classify/classify?crtpage={{item.key}}">
+                <view class="classify-active-img">
+                    <text class="iconfont {{item.icon}} classify-icon" style="color:{{item.color}};"></text>
+                </view>
+                <text class="classify-active-text">{{item.label}}</text>
+            </navigator>
+        </block>
+    </view>
+    <view class="activing">
+        <view class="activing-title">
+            <text class="activing-title-img iconfont icon-remen"></text>
+            <text>进行中的活动</text>
+        </view>
+        <block wx:for="{{activing}}" wx:key="{{index}}">
+            <navigator class="activing-item" url="/pages/promotion/promotion?id={{item.id}}">
+                <image src="{{item.img}}" class="activing-item-img"></image>
+            </navigator>
+        </block>
+    </view>
+    <view style="height:90.5rpx;width:100%;"></view>
+</view>

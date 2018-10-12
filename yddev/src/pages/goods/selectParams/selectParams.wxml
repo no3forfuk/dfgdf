@@ -1,0 +1,24 @@
+<!--pages/goods/selectParams/selectParams.wxml-->
+<view class="select-params">
+    <view class="params-body">
+        <block wx:for="{{paramData}}" wx:key="{{index}}">
+            <view class="params-items">
+                <text>选择{{item.label}}</text>
+                <view class="params-items-list">
+                    <block wx:for="{{item.items}}" wx:key="{{idx}}" wx:for-index="idx" wx:for-item="list">
+                        <text class="items-list {{idx == defaultSelect[index]? 'selected':'unselected'}}"
+                              bindtap="onselected"
+                              data-index="{{index}}"
+                              data-idx="{{idx}}">
+                            <text>{{list}}</text>
+                        </text>
+                    </block>
+                </view>
+            </view>
+        </block>
+    </view>
+    <!-- footer -->
+    <view class="select-comfirm" bindtap="emitclose">
+        <text>确定</text>
+    </view>
+</view>

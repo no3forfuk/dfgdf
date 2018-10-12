@@ -1,0 +1,8 @@
+<tab items="{{tabItems}}" bindchange="swithTab" current="0"></tab>
+<scroll-view class="mall-scroll-view"
+             scroll-y="true"
+             enable-back-to-top="true"
+             style="height:{{scrollViewHeight}}px;">
+    <ydmall wx:if="{{currentPage == 'ydmall'}}"></ydmall>
+    <visited wx:if="{{currentPage == 'visited'}}"></visited>
+</scroll-view>

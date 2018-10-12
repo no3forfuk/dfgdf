@@ -1,0 +1,91 @@
+/* pages/homemaking/homemaking.wxss */
+
+.homemaking-page {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+.homemaking-header {
+    width: 100%;
+    height: 100rpx;
+    padding: 24rpx 0;
+    display: flex;
+}
+
+.homemaking-server {
+    width: 180rpx;
+    height: 52rpx;
+    border-radius: 2px;
+    border: 1px solid #999;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: #999;
+    font-size: 14px;
+    line-height: 20rpx;
+    margin-left: 40rpx;
+}
+
+.homemaking-active {
+    border: 0 none;
+    background-color: #3d9689;
+    color: #fff;
+}
+
+.homemaking-tip {
+    width: 100%;
+    padding: 16rpx 40rpx;
+}
+
+.homemaking-tip-text {
+    color: #999;
+    font-size: 12px;
+    line-height: 17px;
+}
+
+/* textarea */
+
+.textarea-box {
+    width: 100%;
+    height: 408rpx;
+    padding: 22rpx 40rpx;
+    background-color: #fff;
+}
+
+.complain-textarea {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    color: #424242;
+}
+
+.placeholder-class {
+    font-size: 14px;
+    line-height: 20px;
+    color: #c3c3c3;
+}
+
+.submit-btn-box {
+    width: 100%;
+    margin-top: 24rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.submit-btn {
+    width: 363rpx;
+    height: 72rpx;
+    font-size: 18px;
+    background-color: #3d9689;
+    color: #fff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}

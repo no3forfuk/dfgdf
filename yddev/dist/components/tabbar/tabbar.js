@@ -1,0 +1,1 @@
+const app=getApp();Component({properties:{items:{type:Array,value:[]},current:{type:Number,value:0,observer(t,e,r){this.setData({current:t})}}},data:{current:0},attached(){},methods:{ontapitem(t){const[e,r]=[t.currentTarget.dataset,this.data.current];e.index!==r&&(this.setData({current:e.index}),this.triggerEvent("change",e))}}});

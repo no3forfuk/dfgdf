@@ -1,0 +1,100 @@
+<!--pages/houseDetails/houseDetails.wxml-->
+<scroll-view class="resources-details-page" scroll-y="true" bindscroll="onpagescroll">
+    <!-- swiper -->
+    <swiper class="details-swiper" indicator-dots="{{detailSwiper.dots}}"
+            indicator-color="{{detailSwiper.indicatorColor}}"
+            indicator-active-color="{{detailSwiper.activeColor}}"
+            autoplay="{{detailSwiper.autoplay}}"
+            interval="{{detailSwiper.interval}}"
+            duration="{{detailSwiper.duration}}"
+            circular="{{detailSwiper.circular}}">
+        <block wx:for="{{detailSwiper.items}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}"
+                       class="swiper-item-img"
+                       bindtap="onviewswiper"
+                       mode="aspectFill"
+                       data-index="{{index}}"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- info -->
+    <view class="details-info">
+        <view class="info-name">{{baseInfo.name}}</view>
+        <view class="info-reason">推荐理由：{{baseInfo.recommend_reasons}}</view>
+        <view class="info-price">{{baseInfo.price}}/月</view>
+    </view>
+    <!-- position -->
+    <view class="base-card details-position">
+        <view class="base-label position-label">地理位置</view>
+        <view class="position-content">
+            <text class="iconfont yd-dingwei"></text>
+            <text class="position-content-text">{{baseInfo.address}}</text>
+        </view>
+    </view>
+    <!-- date -->
+    <view class="base-card details-date">
+        <view class="base-label date-label">入住日期</view>
+        <text class="house-content-item-label">{{baseInfo.rental_tips}}</text>
+    </view>
+    <!-- house -->
+    <view class="base-card details-house">
+        <view class="base-label house-label">房源信息</view>
+        <view class="house-content">
+            <block wx:for="{{houseContent}}" wx:key="{{index}}">
+                <view class="house-content-item">
+                    <text class="house-content-item-label">{{item.label}}</text>
+                    <text class="house-content-item-text">{{item.text}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <!-- room -->
+    <view class="base-card details-room">
+        <view class="base-label room-label">房间配置</view>
+        <view class="room-content">
+            <block wx:for="{{roomConfig}}" wx:key="{{index}}">
+                <view class="room-content-item">
+                    <image class="room-item-img" src="{{item.image_path}}"></image>
+                    <text class="room-content-item-text">{{item.name}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <!-- hardware -->
+    <view class="base-card details-herdware">
+        <view class="base-label herdware-label">硬件设施</view>
+        <view class="hardware-content">
+            <block wx:for="{{hardwareData}}" wx:key="{{index}}">
+                <view class="hardware-item">
+                    <image class="hardware-img" src="{{item.image_path}}"></image>
+                    <text class="hardware-text">{{item.name}}</text>
+                </view>
+            </block>
+        </view>
+    </view>
+    <!-- likeness -->
+    <view class="base-card">
+        <view class="base-label">类似房源</view>
+        <view class="likeness-content">
+            <block wx:for="{{likenessData}}" wx:key="{{index}}">
+                <navigator class="likeness-item" url="/pages/houseDetails/houseDetails?id={{item.house_id}}">
+                    <image class="likeness-img" src="{{item.image_url}}"></image>
+                    <tetx class="likeness-type">{{item.title}}</tetx>
+                    <tetx class="likeness-posi">{{item.apartment_title}}</tetx>
+                    <tetx class="likeness-price">￥{{item.price}}/月</tetx>
+                </navigator>
+            </block>
+        </view>
+    </view>
+    <!-- footer placeholder  -->
+    <view style="height:90.5rpx;width:100%;margin-top:14.48rpx;"></view>
+</scroll-view>
+<view class="details-page-footer">
+    <view class="footer-collect" bindtap="toggleCollect">
+        <text class="iconfont icon-xihuan_ footer-collect-icon {{isCollected?'isCollected':''}}"></text>
+        <text class="footer-collect-text {{isCollected?'isCollected':''}}">{{isCollected?'已收藏':'收藏'}}</text>
+    </view>
+    <view class="footer-order" bindtap="playCall" data-phone="{{phone}}">预约看房</view>
+    <view class="footer-pay" bindtap="goHouserOrder">去下单</view>
+</view>

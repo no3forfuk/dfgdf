@@ -1,0 +1,262 @@
+@import "../../static/css/mixin.scss";
+
+.goods-order-footer {
+  height: rpx(100);
+  width: 100%;
+  background-color: #fff;
+  border-top: rpx(1) solid #f1f1f1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 2;
+  bottom: 0;
+  left: 0;
+  &-left {
+    padding-left: rpx(20);
+    font-size: 14px;
+    line-height: 100%;
+    color: #000;
+  }
+  &-right {
+    height: 100%;
+    width: rpx(253);
+    background-color: #EB5353;
+    color: #fff;
+    font-size: 21px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+//收货地址
+.receiving-address {
+  width: 100%;
+  padding: rpx(18.1);
+  &-title {
+    color: #878787;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+  &-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+}
+
+//商品概览
+.goods-general {
+  width: 100%;
+  padding: 0 rpx(18.1);
+  &-store {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: rpx(18.1) 0;
+    &-label {
+      font-size: 14px;
+    }
+    &-tips {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: nowrap;
+      &-tip {
+        font-size: 12px;
+        border: 1px solid #f1f1f1;
+        color: #d8d8d8;
+      }
+    }
+  }
+  &-goods {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: rpx(18.1) 0;
+    border-top: 1px solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
+    &-left {
+      display: flex;
+      flex-direction: row;
+      &-image {
+        width: rpx(97.14);
+        height: rpx(97.14);
+      }
+      &-nn {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+        margin-left: 10px;
+        justify-content: space-between;
+        &-num {
+          text-align: center;
+        }
+      }
+    }
+    &-right {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      &-before {
+        color: #d8d8d8;
+        font-size: 12px;
+        text-decoration: line-through;
+        margin-right: 10px;
+      }
+      &-after {
+        color: #484848;
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+  }
+  &-standard {
+    padding: rpx(18.1) 0;
+    width: 100%;
+    &-item {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: rpx(10) 0;
+      font-size: 15px;
+    }
+  }
+}
+
+//邮费
+.goods-mail-price {
+  padding: rpx(10) rpx(18.1);
+  width: 100%;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+//备注
+.goods-remarks {
+  width: 100%;
+  padding: rpx(18.1);
+  &-textarea {
+    width: 100%;
+    height: rpx(188);
+    border: 1px solid #cacaca;
+    background-color: #f2f2f2;
+    font-size: 14px;
+    color: #cacaca;
+    &-mark {
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+    }
+  }
+}
+
+.message-tips {
+  margin-top: rpx(36.2);
+  padding: 0 rpx(18.1);
+  font-size: 12px;
+  color: #333;
+}
+
+.spliter {
+  width: 100%;
+  height: rpx(8);
+  background-color: #EBEBEB;
+}
+
+.address-popup {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: translateX(100%);
+}
+
+.address-icon {
+  width: rpx(37);
+  height: rpx(37);
+  background-color: #eee;
+}
+
+.edit-adrress-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.address-text {
+  font-size: 8px;
+  color: #444;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+}
+
+.radio-text {
+  width: 100%;
+  margin-left: 8px;
+}
+
+radio {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  position: relative;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+radio .wx-radio-input {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  border: none; /* 替换边框（隐藏原有边框） */
+  position: absolute;
+  top: 1px;
+  left: 1px;
+}
+
+radio .wx-radio-input.wx-radio-input-checked {
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  overflow: visible;
+  transform: translate(0, 0) scale(1);
+}
+
+radio .wx-radio-input.wx-radio-input-checked::before {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #888;
+  font-size: 0;
+}
+
+

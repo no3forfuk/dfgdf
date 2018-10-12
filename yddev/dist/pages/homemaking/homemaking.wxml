@@ -1,0 +1,23 @@
+<!--pages/homemaking/homemaking.wxml-->
+<view class="homemaking-page">
+    <view class="homemaking-header">
+        <view class="homemaking-server {{homemakingType=='server'?'homemaking-active':''}}" bindtap="onselecthomemaking" data-type="server">
+            <text class="homemaking-text">家政服务</text>
+        </view>
+        <view class="homemaking-server {{homemakingType=='suggest'?'homemaking-active':''}}" bindtap="onselecthomemaking" data-type="suggest">
+            <text class="homemaking-text">家政意见</text>
+        </view>
+    </view>
+    <view class="textarea-box">
+        <textarea class="complain-textarea" placeholder="{{homemakingData.placeholder}}" placeholder-class="placeholder-class" bindinput="onsethomemakingvalue" show-confirm-bar="false">
+        </textarea>
+    </view>
+    <view class="homemaking-tip">
+        <text class="homemaking-tip-text">{{homemakingData.tip}}</text>
+    </view>
+    <view class="submit-btn-box">
+        <view class="submit-btn" bindtap="onsubmithomemaking">
+            <text>提交</text>
+        </view>
+    </view>
+</view>

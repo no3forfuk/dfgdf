@@ -1,0 +1,42 @@
+<!--template/postCard/postCard.wxml-->
+
+<view class="post-card">
+    <view class="post-card-left">
+        <image class="post-card-left-img" src="{{info.data.head_image_url}}" bindtap="onlinktouser"
+               data-id="{{info.data.uid}}"></image>
+    </view>
+    <view class="post-card-right">
+        <view class="post-card-right-name"
+              bindtap="onlinktouser"
+              data-id="{{info.data.uid}}">{{info.data.nick}}
+        </view>
+        <view class="post-card-right-content">{{info.data.content}}</view>
+        <view class="post-card-right-imgs" style="width:{{info.data.atlas_list.length == 4?'400rpx':'100%'}};">
+            <image class="post-card-right-img"
+                   wx:for="{{info.data.atlas_list}}"
+                   wx:key="{{index}}"
+                   mode="aspectFill"
+                   src="{{item.image_path}}"
+                   bindtap="onviewimg"
+                   data-index="{{index}}"></image>
+        </view>
+        <view class="post-card-like-comment">
+            <text class="post-card-like-img iconfont icon-xihuan_"
+                   bindtap="doLike"
+                   style="color: {{info.data.praised == 0? '#a1a1a1':'#ff9191'}};"
+                   data-item="{{info.data}}"></text>
+            <text class="post-card-like-text">{{info.data.praise_count}}</text>
+            <image class="post-card-like-img iconfont icon-xiaoxi" bindtap="linkToPost" data-id="{{info.data.feed_id}}"></image>
+            <text class="post-card-like-text">{{info.data.comment_count}}</text>
+        </view>
+        <view class="post-card-right-comment">
+            <view class="post-card-comment-desc">
+                <text class="post-card-comment-username"
+                      data-id="{{info.data.comment.uid}}"
+                      bindtap="onlinktouserFromComment">@{{info.data.comment.nick}}:</text>
+                <text>{{info.data.comment.content}}</text>
+            </view>
+            <text class="post-card-comment-more" bindtap="linkToPost" data-id="{{info.data.feed_id}}">查看更多评论</text>
+        </view>
+    </view>
+</view>

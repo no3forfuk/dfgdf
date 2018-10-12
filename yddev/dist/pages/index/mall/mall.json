@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "visited": "./visited/visited",
+    "ydmall": "./ydmall/ydmall",
+    "tab": "/components/tab/tab"
+  }
+}

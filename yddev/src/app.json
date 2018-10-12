@@ -1,0 +1,28 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/post/post",
+    "pages/addPost/addPost",
+    "pages/promotion/promotion",
+    "pages/goods/goods",
+    "pages/classify/classify",
+    "pages/user/user",
+    "pages/viewHistory/viewHistory",
+    "pages/complain/complain",
+    "pages/homemaking/homemaking",
+    "pages/houseResources/houseResources",
+    "pages/myOrder/myOrder",
+    "pages/rent/rent",
+    "pages/houseDetails/houseDetails",
+    "pages/goodsAppraise/goodsAppraise",
+    "pages/comfirmOrder/comfirmOrder"
+  ],
+  "window": {
+    "backgroundTextStyle": "#000",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "圆点公寓",
+    "navigationBarTextStyle": "black"
+  },
+  "debug": false
+}

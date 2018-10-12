@@ -1,0 +1,50 @@
+@import "../../static/css/mixin.scss";
+
+.complain-page {
+  width: 100%;
+  height: 100%;
+  background-color: #f4f4f4;
+  padding-top: rpx(24);
+}
+
+.textarea-box {
+  width: 100%;
+  height: rpx(408);
+  padding: rpx(22) rpx(40);
+  background-color: #fff;
+}
+
+.complain-textarea {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  line-height: 20px;
+  color: #424242;
+}
+
+.placeholder-class {
+  font-size: 14px;
+  line-height: 20px;
+  color: #c3c3c3;
+}
+
+.submit-btn-box {
+  width: 100%;
+  margin-top: rpx(24);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.submit-btn {
+  width: rpx(363);
+  height: rpx(72);
+  font-size: 18px;
+  background-color: #3d9689;
+  color: #fff;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}

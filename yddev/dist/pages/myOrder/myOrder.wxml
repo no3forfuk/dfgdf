@@ -1,0 +1,30 @@
+<!--pages/myOrder/myOrder.wxml-->
+<view class="order-page">
+    <view class="order-header">
+        <block wx:for="{{headerData}}" wx:key="{{index}}">
+            <view class="order-header-item" style="width:{{100/headerData.length}}%;" bindtap="onchangefeetype"
+                  data-index="{{index}}">
+                <text class="header-item-text {{index == feeCurrent?'current-class':''}}">{{item.text}}</text>
+            </view>
+            <view style="width: 1px;height: 38rpx;background-color: #f2f2f2;"
+                  wx:if="{{index < headerData.length-1 || index == 0}}"></view>
+        </block>
+        <view class="fee-mark" style="width:{{markStyle.width}}px;transform: translateX({{markStyle.left}}px)"></view>
+    </view>
+    <scroll-view class="order-body">
+        <view wx:if="{{feeCurrent == 1}}">
+            <block wx:for="{{paidData}}" wx:key="{{index}}">
+                <paid detail="{{item}}"></paid>
+            </block>
+        </view>
+        <view wx:if="{{feeCurrent == 0}}">
+            <block wx:for="{{unpaidData}}" wx:key="{{index}}">
+                <unpaid bindselectItem="onselectunpaiditem"></unpaid>
+            </block>
+        </view>
+    </scroll-view>
+    <!-- footer pay btn -->
+    <view class="order-footer" animation="{{animationData}}" bindtap="ongopay">
+        <text>支付</text>
+    </view>
+</view>
